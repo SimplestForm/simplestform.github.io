@@ -1,0 +1,79 @@
+.page-container{
+  display: grid;
+  grid-template-columns: 300px auto;
+  grid-column-gap: 84px;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  left: -90px;
+}
+
+.article-info{
+  margin-top: 56px;
+  text-align: right;
+  font-family: 'Inconsolata';
+  line-height: 1.2;
+  position: relative;
+}
+
+.article-author{
+  font-weight: 700;
+}
+
+.article-small-line{
+  width: 72px;
+  height: 4px;
+  background-color: #193c66;
+  margin: 32px 0 32px auto;
+}
+
+.page-hero{
+  width: 100%;
+  color: #fff;
+}
+
+.page-hero.page-tutorial{
+  background-color: #193c66;
+}
+
+.page-hero.page-other{
+  background-color: #222;
+}
+
+.page-hero-content{
+  height: 100%;
+  display: flex;
+  width: 100%;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  grid-column-start: 2;
+}
+
+.page-hero-content h1{
+  margin-top: 24px;
+  font-size: 72px;
+}
+
+.page-tags{
+  font-size: 26px;
+  font-family: 'Inconsolata';
+  padding-top: 144px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 700;
+  opacity: 0.6;
+}
+
+.page-tags i{
+  font-size: 20px;
+  margin-right: 4px;
+}
+
+.page-container .container{
+  margin: unset;
+}
+
+.page-container .container p:first-of-type{
+  margin-top: 48px;
+  font-size: 26px;
+}

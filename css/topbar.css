@@ -1,0 +1,147 @@
+.topbar, .topbar-spacer{
+  width: 100%;
+  height: 72px;
+}
+
+.topbar{
+  box-sizing: border-box;
+  position: fixed;
+  background-color: #fff;
+  z-index: 5;
+  padding: 0 24px;
+}
+
+.topbar-inner{
+  max-width: 1100px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.topbar-logo, .topbar-logo-small, .topbar-logo-wide{
+  height: 40%;
+}
+
+.custom-link .topbar-logo a:hover{
+  opacity: 1.0;
+}
+
+.topbar-logo img, .topbar-logo-small img, .topbar-logo-wide img{
+  height: 100%;
+}
+
+.topbar-item{
+  font-size: 20px;
+  margin: 0 16px;
+}
+
+.topbar-item.yt a:hover{
+  color: red;
+  opacity: unset;
+}
+
+.topbar-item.tw a:hover{
+  color: #1da1f2;
+  opacity: unset;
+}
+
+@media (max-width: 800px){
+  .topbar{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+
+  .topbar-logo{
+    display: none;
+  }
+
+  .topbar-inner{
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 600px){
+
+  .topbar-inner{
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    border-left: 4px solid #193c66;
+    background-color: #fff;
+    flex-flow: column nowrap;
+    justify-content: center;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+  }
+
+  .topbar-item{
+    font-size: 36px;
+    margin: 8px 0;
+  }
+
+  .topbar-inner.show-sidebar{
+    left: 0;
+  }
+
+  .topbar-hamburger{
+    margin-left: auto;
+    z-index: 7;
+  }
+
+  .topbar-logo-small{
+    display: none;
+  }
+
+  .topbar-item.yt, .topbar-item.tw{
+    line-height: 1.1;
+  }
+
+  .topbar-item.yt :not(i), .topbar-item.tw :not(i){
+    font-size: 28px;
+  }
+
+  .topbar-item .fab{
+    display: block;
+    text-align: center;
+  }
+}
+
+@media (min-width: 600px){
+  .topbar-inner{
+    flex-flow: row nowrap;
+  }
+
+  .topbar-inner div:nth-of-type(2){
+    margin-left: auto;
+  }
+
+  .topbar-hamburger, .topbar-logo-wide{
+    display: none;
+  }
+
+  .topbar-item.yt :not(i), .topbar-item.tw :not(i){
+    font-size: 16px;
+  }
+
+  .topbar-item .fab{
+    margin-right: 2px;
+  }
+}
+
+@media (min-width: 800px){
+  .topbar-logo-small{
+    display: none;
+  }
+
+  .topbar-inner{
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 400px){
+  .topbar-logo-wide{
+    height: 30%;
+  }
+}

@@ -1,0 +1,28 @@
+.about-head{
+  color: #fff;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #193c66;
+  padding: 64px 0;
+  margin-bottom: 64px;
+}
+
+.about-head img{
+  width: 300px;
+}
+
+.page h1{
+  font-size: 72px;
+  margin-bottom: 64px;
+}
+
+.about-logo{
+  max-width: 300px;
+}
+
+.about-logo img{
+  border-radius: 50%;
+}

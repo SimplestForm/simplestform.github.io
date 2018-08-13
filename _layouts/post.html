@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<div class='page-hero {% if page.tags contains "tutorial" %} page-tutorial {% else %} page-other {% endif %}'>
+  <div class='page-container'>
+    <div class='page-hero-content'>
+      <div class='page-tags'>
+        {% for tag in page.tags %}
+          <div class='page-tags-item custom-link'>
+            <a href='/tag/{{ tag }}'>
+              <span>
+                {% if tag == "announcement" %}<i class="fas fa-bullhorn"></i>{% endif %}
+                {% if tag == "tutorial" %}<i class="fas fa-chalkboard-teacher"></i>{% endif %}
+                {{ tag }}
+              </span>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+      <h1>{{ page.title }}</h1>
+    </div>
+  </div>
+</div>
+
+<div class='page-container'>
+  <div class='article-info'>
+    <div class='article-author'>{{ page.author }}</div>
+    <div class='article-date'>{{ page.date | date: "%B %d, %Y" }}</div>
+    <div class='article-small-line'></div>
+  </div>
+  <div class='container'>
+    {{ content }}
+  </div>
+</div>

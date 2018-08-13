@@ -1,0 +1,15 @@
+---
+layout: default
+title: home
+---
+
+<div class='container home-head'>
+  <div class='image-container home-logo'>
+    <img src='/img/sf-logo-color.svg' alt='S/F Logomark'>
+  </div>
+  <p>The most straightforward, <b>easy-to-understand</b> coding tutorials on the web. New HTML/CSS, Javascript/&#8203;JQuery, and other coding tutorials <b>every week</b>.</p>
+</div>
+
+{% for post in paginator.posts %}
+  {% include post-gen.html data=post %}
+{% endfor %}

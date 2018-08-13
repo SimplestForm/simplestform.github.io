@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+<div class='container home-head'>
+  <h1>Tag: {{ page.tag }}</h1>
+  {{ content }}
+</div>
+
+{% for post in site.tags[page.tag] %}
+  {% include post-gen.html data=post %}
+{% endfor %}

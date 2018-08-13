@@ -1,0 +1,26 @@
+<div class='post'>
+  <div class='post-info'>
+    <div class='post-author'><span>{{ include.data.author }}</span></div>
+    <div class='post-date'><span>{{ include.data.date | date: "%B %d, %Y" }}</span></div>
+    <div class='post-tags'>
+      {% for tag in include.data.tags %}
+      <div class='post-tags-item custom-link'>
+        <a href='/tag/{{ tag }}'>
+          {% if tag == "announcement" %}<i class="fas fa-bullhorn"></i>{% endif %}
+          {% if tag == "tutorial" %}<i class="fas fa-chalkboard-teacher"></i>{% endif %}
+          {{ tag }}
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class='container'>
+    <h1 class='custom-link'>
+      <a href='{{ include.data.url }}'>
+        {{ include.data.title }}
+      </a>
+    </h1>
+    {{ include.data.content | split:'<!--break-->' | first }}
+    <a href="{{ include.data.url }}">read more</a>
+  </div>
+</div>
