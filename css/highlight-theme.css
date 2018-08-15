@@ -1,6 +1,6 @@
 /* MONOKAI, with personal modifications */
 
-.highlight pre { background-color: #272822; color: #fff; }
+.highlight pre { background-color: #272822; color: #fff; white-space: pre-wrap;}
 .highlighter-rouge { background-color: #272822; color: #f8f8f2; }
 .highlight .hll { background-color: #272822; }
 .highlight .c { color: #75715e } /* Comment */

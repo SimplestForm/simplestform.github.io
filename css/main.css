@@ -79,6 +79,7 @@ h1{
 }
 
 .home-logo{
+  width: 60%;
   margin: 0 auto;
   max-width: 400px;
 }
@@ -110,14 +111,8 @@ h1{
   box-sizing: border-box;
   padding: 4px 4px 4px 16px;
   border-left: 12px solid #e55c5c;
-  border-bottom: 2px solid #e55c5c;
   border-right: 2px solid #e55c5c;
-  top: -36px;
-  left: -32px;
-  right: 0;
   font-weight: 900;
-  transform: rotate(90deg);
-	transform-origin: left top 0;
 }
 
 .highlight code.language-css:before{
@@ -133,11 +128,8 @@ h1{
 }
 
 .post{
-  padding: 48px 16px;
+  padding: 48px 24px;
   border-top: 1px solid rgba(0,0,0,0.4);
-  display: grid;
-  grid-template-columns: 160px auto;
-  grid-column-gap: 48px;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -161,9 +153,7 @@ h1{
 }
 
 .post-info{
-  font-family: 'Inconsolata';
   line-height: 1.3;
-  text-align: right;
 }
 
 .post-tags{
@@ -194,6 +184,71 @@ h1{
 
 .footer{
   margin-top: 64px;
-  padding: 32px 0;
+  padding: 32px 24px;
   border-top: 1px solid rgba(0,0,0,0.4);
+}
+
+.page{
+  padding: 0 24px;
+}
+
+@media (min-width: 768px){
+  .post{
+    display: grid;
+    grid-template-columns: 160px auto;
+    grid-column-gap: 48px;
+  }
+
+  .post-info{
+    font-family: 'Inconsolata';
+    text-align: right;
+  }
+}
+
+@media (max-width: 768px){
+  .post-author, .post-tags{
+    display: none;
+  }
+
+  .post-date{
+    margin-bottom: 12px;
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 600px){
+  .home-head{
+    font-size: 24px;
+  }
+
+  .home-head h1{
+    font-size: 42px;
+  }
+
+  .post p{
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 850px){
+  .highlight code:before{
+    top: -36px;
+    right: 0;
+    left: -32px;
+    transform: rotate(90deg);
+  	transform-origin: left top 0;
+    border-bottom: 2px solid #e55c5c;
+  }
+}
+
+@media (max-width: 850px){
+  .highlight{
+    padding-top: 40px;
+  }
+
+  .highlight code:before{
+    top: -76px;
+    left: -32px;
+    border-top: 2px solid #e55c5c;
+  }
 }

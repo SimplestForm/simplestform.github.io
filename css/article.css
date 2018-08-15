@@ -1,16 +1,10 @@
 .page-container{
-  display: grid;
-  grid-template-columns: 300px auto;
-  grid-column-gap: 84px;
   max-width: 1100px;
   margin: 0 auto;
-  position: relative;
-  left: -90px;
 }
 
 .article-info{
   margin-top: 56px;
-  text-align: right;
   font-family: 'Inconsolata';
   line-height: 1.2;
   position: relative;
@@ -24,7 +18,7 @@
   width: 72px;
   height: 4px;
   background-color: #193c66;
-  margin: 32px 0 32px auto;
+  margin: 32px 0;
 }
 
 .page-hero{
@@ -51,13 +45,12 @@
 
 .page-hero-content h1{
   margin-top: 24px;
-  font-size: 72px;
+  font-size: 56px;
 }
 
 .page-tags{
-  font-size: 26px;
   font-family: 'Inconsolata';
-  padding-top: 144px;
+  padding-top: 100px;
   text-transform: uppercase;
   letter-spacing: 4px;
   font-weight: 700;
@@ -69,11 +62,61 @@
   margin-right: 4px;
 }
 
-.page-container .container{
-  margin: unset;
-}
-
 .page-container .container p:first-of-type{
   margin-top: 48px;
-  font-size: 26px;
+  font-size: 23px;
+}
+
+@media (min-width: 1200px){
+  .page-container{
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-column-gap: 84px;
+    position: relative;
+    left: -90px;
+  }
+
+  .page-container .container{
+    margin: unset;
+  }
+
+  .article-info{
+    text-align: right;
+  }
+
+  .article-small-line{
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 1440px){
+  .page-hero h1{
+    font-size: 72px;
+  }
+
+  .page-tags{
+    font-size: 26px;
+    padding-top: 144px;
+  }
+
+  .page-container .container p:first-of-type{
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 600px){
+  .page-hero h1{
+    font-size: 42px;
+  }
+
+  .page-container .container p:first-of-type{
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1200px){
+  .page-container{
+    max-width: 700px;
+    padding: 0 24px;
+  }
 }
