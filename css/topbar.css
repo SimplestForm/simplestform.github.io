@@ -66,9 +66,9 @@
   .topbar-inner{
     position: fixed;
     top: 0;
-    left: 100%;
-    width: 100%;
-    border-left: 4px solid #193c66;
+    right: -100%;
+    width: 300px;
+    border-left: 1px solid rgba(0,0,0,0.4);
     background-color: #fff;
     flex-flow: column nowrap;
     justify-content: center;
@@ -82,7 +82,7 @@
   }
 
   .topbar-inner.show-sidebar{
-    left: 0;
+    right: 0;
   }
 
   .topbar-hamburger{
