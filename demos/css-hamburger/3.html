@@ -1,0 +1,24 @@
+<input type='checkbox' id='hamburger'>
+<label for='hamburger'>☰ Menu</label>
+<div id='hamburger-menu'>
+  Contents of menu
+</div>
+<style>
+label{
+  cursor: pointer;
+}
+
+#hamburger{
+  display: none;
+}
+
+#hamburger-menu{
+  position: relative;
+  left: -100%;
+  transition: left 0.2s ease;
+}
+
+#hamburger:checked ~ #hamburger-menu{
+  left: 0;
+}
+</style>

@@ -9,6 +9,7 @@
   background-color: #fff;
   z-index: 5;
   padding: 0 24px;
+  border-bottom: 1px solid rgba(0,0,0,0.4);
 }
 
 .topbar-inner{

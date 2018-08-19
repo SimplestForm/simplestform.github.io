@@ -1,0 +1,42 @@
+<input type='checkbox' id='hamburger'>
+<label for='hamburger'>☰ Menu</label>
+<div id='hamburger-menu'>
+  <div><span>Item 1</span></div>
+  <div><span>Item 2</span></div>
+  <div><span>Item 3</span></div>
+</div>
+<style>
+*{
+  font-family: sans-serif;
+}
+
+label{
+  cursor: pointer;
+  z-index: 5;
+  position: relative;
+}
+
+#hamburger{
+  display: none;
+}
+
+#hamburger-menu{
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: left 0.2s ease;
+  width: 400px;
+  height: 100%;
+  background-color: #eee;
+  border-right: 12px solid #222;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding-left: 28px;
+}
+
+#hamburger:checked ~ #hamburger-menu{
+  left: 0;
+}
+</style>
