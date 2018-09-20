@@ -28,8 +28,12 @@ layout: default
     <div class='article-author'>{{ page.author }}</div>
     <div class='article-date'>{{ page.date | date: "%B %d, %Y" }}</div>
     <div class='article-small-line'></div>
+    <div class='article-toc'>
+      <ul></ul>
+    </div>
   </div>
   <div class='container'>
     {{ content }}
   </div>
+  {% include table-of-contents.html %}
 </div>
