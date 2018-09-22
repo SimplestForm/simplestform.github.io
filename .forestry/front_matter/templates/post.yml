@@ -1,0 +1,48 @@
+---
+label: Post
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: layout
+  label: layout
+  config:
+    required: true
+  default: post
+- type: text
+  name: author
+  label: author
+  config:
+    required: true
+  default: Samson Zhang
+- type: text
+  label: title
+  name: title
+  config:
+    required: true
+- type: datetime
+  name: date
+  label: date
+  config:
+    date_format: YY-MM-DD
+    time_format: hh:mm:ss A ZZ
+    required: true
+- type: tag_list
+  name: tags
+  label: tags
+- type: file
+  name: thumbnail
+  label: thumbnail
+  description: Image of any size or 16:9 .MP4 video
+  config:
+    maxSize: '5'
+- type: text
+  name: keyword
+  label: keyword
+  config:
+    required: true
+- type: text
+  name: thumb-ext
+  label: thumb-ext
+  config:
+    required: false
