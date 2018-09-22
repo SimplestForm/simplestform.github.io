@@ -6,7 +6,7 @@ date: 2018-09-22 00:00:00 +0000
 tags: []
 thumbnail: ''
 keyword: forestry-test-post
-thumb-ext: ''
+thumb-ext: 'false'
 
 ---
 Hello everyone! This post is a test post from Forestry, a CMS I'm trying out. If everything works it could make my life a lot easier. So far it seems to be going fine. Hit read more to see some tests I'm doing.
