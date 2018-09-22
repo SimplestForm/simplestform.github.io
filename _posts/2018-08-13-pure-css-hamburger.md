@@ -1,13 +1,13 @@
 ---
 layout: post
 author: Samson Zhang
-title:  "Responsive Hamburger Menu in Pure CSS (No JS)"
-date:   2018-08-13 08:00:00 -0400
-tags: tutorial pure-css
+title: Responsive Hamburger Menu in Pure CSS (No JS)
+date: 2018-08-13 12:00:00 +0000
+tags: []
 keyword: css-hamburger
 thumb-ext: mp4
----
 
+---
 Hamburger menus are a common feature in the design of websites and apps. Being able to hide menu items off to the side yet just an intuitive tap away comes in especially useful for responsive and mobile-friendly designs. Typically functionality involving buttons and showing and hiding elements involves JavaScript; but with a clever trick, it's possible to accomplish this in pure CSS as well.
 
 <!--break-->
