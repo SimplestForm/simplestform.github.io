@@ -3,7 +3,9 @@ title: Forestry Test Post
 layout: post
 author: Samson Zhang
 date: 2018-09-22 20:52:41 +0000
-tags: []
+tags:
+- announcement
+- pure-css
 thumbnail: ''
 keyword: forestry-test-post
 thumb-ext: 'false'
