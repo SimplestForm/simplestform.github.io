@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class='page-hero {% if page.tags contains "tutorial" %}page-tutorial{% else %}page-other{% endif %} {% if page.thumb-ext %}page-hero-with-thumb{% endif %}'>
+<div class='page-hero {% if page.tags contains "tutorial" %}page-tutorial{% else %}page-other{% endif %} {% if page.thumb-ext != "false" %}page-hero-with-thumb{% endif %}'>
   <div class='page-container'>
     <div class='page-hero-content'>
       <div class='page-tags'>
@@ -31,7 +31,7 @@ layout: default
     {% include article-toc.html class="toc-desktop" %}
   </div>
   <div class='container'>
-    {% if page.thumb-ext %}
+    {% if page.thumb-ext != "false" %}
     <div class='post-thumb '>
       {% if page.thumb-ext == "mp4" %}
       <div class='video-container'><video loop src='/img/thumb/{{ page.keyword }}.mp4' autoplay='autoplay' muted='muted'></video></div>

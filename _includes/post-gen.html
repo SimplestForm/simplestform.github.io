@@ -20,7 +20,7 @@
     </a>
   </h1>
   <div class='container'>
-    {% if include.data.thumb-ext %}
+    {% if include.data.thumb-ext != "false" %}
     <a href='{{ include.data.url }}'>
       <div class='post-thumb '>
         {% if include.data.thumb-ext == "mp4" %}
