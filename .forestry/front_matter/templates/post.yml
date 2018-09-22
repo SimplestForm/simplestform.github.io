@@ -46,3 +46,5 @@ fields:
   label: thumb-ext
   config:
     required: false
+pages:
+- _posts/Forestry-Test-Post.md
