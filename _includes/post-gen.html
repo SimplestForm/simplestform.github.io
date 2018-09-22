@@ -20,14 +20,14 @@
     </a>
   </h1>
   <div class='container'>
-    {% if include.data.vidthumb %}
-    <div class='post-thumb video-container'>
-      <video loop src='/img/thumb/{{ include.data.vidthumb }}.mp4' autoplay='autoplay' muted='muted'></video>
-    </div>
-    {% elsif include.data.picthumb %}
-    <div class='post-thumb'>
-      <img src='/img/thumb/{{ include.data.picthumb }}.jpg'>
-    </div>
+    {% if include.data.thumb-ext %}
+    <a href='{{ include.data.url }}'>
+      <div class='post-thumb '>
+        {% if include.data.thumb-ext == "mp4" %}
+        <div class='video-container'><video loop src='/img/thumb/{{ include.data.keyword }}.mp4' autoplay='autoplay' muted='muted'></video></div>
+        {% endif %}
+      </div>
+    </a>
     {% endif %}
     {{ include.data.content | split:'<!--break-->' | first }}
     <a href="{{ include.data.url }}">Read more...</a>

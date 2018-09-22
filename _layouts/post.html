@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class='page-hero {% if page.tags contains "tutorial" %} page-tutorial {% else %} page-other {% endif %}'>
+<div class='page-hero {% if page.tags contains "tutorial" %}page-tutorial{% else %}page-other{% endif %} {% if page.thumb-ext %}page-hero-with-thumb{% endif %}'>
   <div class='page-container'>
     <div class='page-hero-content'>
       <div class='page-tags'>
@@ -28,12 +28,20 @@ layout: default
     <div class='article-author'>{{ page.author }}</div>
     <div class='article-date'>{{ page.date | date: "%B %d, %Y" }}</div>
     <div class='article-small-line'></div>
-    <div class='article-toc'>
-      <ul></ul>
-    </div>
+    {% include article-toc.html class="toc-desktop" %}
   </div>
   <div class='container'>
-    {{ content }}
+    {% if page.thumb-ext %}
+    <div class='post-thumb '>
+      {% if page.thumb-ext == "mp4" %}
+      <div class='video-container'><video loop src='/img/thumb/{{ page.keyword }}.mp4' autoplay='autoplay' muted='muted'></video></div>
+      {% endif %}
+    </div>
+    {% endif %}
+    {% assign all-content = content | split:'<!--break-->' %}
+    {{ all-content[0] }}
+    {% include article-toc.html class="toc-mobile" %}
+    {{ all-content[1] }}
   </div>
-  {% include table-of-contents.html %}
+  <script src='/js/table-of-contents.js'></script>
 </div>

@@ -1,17 +1,24 @@
 console.log("toc loaded");
 
-var toc = $(".article-toc ul");
-var level;
+$(function(){
+  var iteration = 0;
 
-$(".container h2, .container h3").each(function(){
-  if($(this).is("h2")){
-    itemClass = "level1";
-  }
-  else{
-    itemClass = "level2";
-  }
+  $(".article-toc ul").each(function(){
+    var toc = $(this);
+    iteration++;
+    $(".container h2, .container h3").each(function(){
+      console.log(iteration);
+      if($(this).is("h2")){
+        itemClass = "level1";
+      }
+      else{
+        itemClass = "level2";
+      }
 
-  itemID = $(this).attr("id");
-  itemText = $(this).text();
-  toc.append("<a href='#" + itemID + "'<li class='" + itemClass + "'>" + itemText + "</li>");
+      itemID = $(this).attr("id");
+      itemText = $(this).text();
+      toc.append("<a href='#" + itemID + "'><li class='" + itemClass + "'>" + itemText + "</li>");
+      console.log(toc, $(this));
+    });
+  });
 });
