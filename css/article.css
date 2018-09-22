@@ -93,6 +93,19 @@
   margin-top: 24px;
 }
 
+.demo{
+  all: initial;
+  width: 100%;
+  min-height: 200px;
+  border: 2px solid #222;
+  border-left: 12px solid #222;
+  box-sizing: border-box;
+}
+
+.demo *, .demo *:hover{
+  all: initial;
+}
+
 @media (min-width: 1200px){
   .page-container{
     display: grid;
