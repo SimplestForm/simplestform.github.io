@@ -15,8 +15,6 @@ Hello everyone! This post is a test post from Forestry, a CMS I'm trying out. If
 
 <!--break-->
 
-<style>.demo-block{all:initial!important;}</style>
-
 <div class='demo-block'>TESTING!
 
 <a href=''>TESTING AGAIN</a>
