@@ -4,6 +4,7 @@ author: Samson Zhang
 title:  "Responsive Hamburger Menu in Pure CSS (No JS)"
 date:   2018-08-13 08:00:00 -0400
 tags: tutorial pure-css
+keyword: css-hamburger
 ---
 
 Hamburger menus are a common feature in the design of websites and apps. Being able to hide menu items off to the side yet just an intuitive tap away comes in especially useful for responsive and mobile-friendly designs. Typically functionality involving buttons and showing and hiding elements involves JavaScript; but with a clever trick, it's possible to accomplish this in pure CSS as well.
@@ -31,7 +32,7 @@ A hamburger menu has two states: open and closed. Instead of trying to create th
 }
 {% endhighlight %}
 
-<iframe class='demo' src='/demos/css-hamburger/1.html'></iframe>
+{% include demo.html filename='1' %}
 
 Essentially, this is all that there is to a hamburger menu. `display: none` can be replaced with whatever code you want to hide your menu, and `display: block` whatever you want to show it. Something else we can do is visually replace the checkbox with a `label`, letting us make the actual button look however we want. Let's take a look at some examples for how we can improve our menu.
 
@@ -67,7 +68,7 @@ label{
 }
 {% endhighlight %}
 
-<iframe class='demo' src='/demos/css-hamburger/2.html'></iframe>
+{% include demo.html filename='2' %}
 
 ### Simple Animation
 
@@ -104,7 +105,7 @@ label{
 }
 {% endhighlight %}
 
-<iframe class='demo' src='/demos/css-hamburger/3.html'></iframe>
+{% include demo.html filename='3' %}
 
 ### Variation: Right Side menu
 
@@ -142,7 +143,7 @@ label{
 }
 {% endhighlight %}
 
-<iframe class='demo' src='/demos/css-hamburger/3b.html'></iframe>
+{% include demo.html filename='3b' %}
 
 ### Styling
 
@@ -192,7 +193,7 @@ label{
 }
 {% endhighlight %}
 
-<iframe class='demo' src='/demos/css-hamburger/4.html'></iframe>
+{% include demo.html filename='4' %}
 
 ## Limitations
 
