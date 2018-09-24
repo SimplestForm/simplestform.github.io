@@ -27,9 +27,6 @@ fields:
     date_format: YY-MM-DD
     time_format: hh:mm:ss A ZZ
     required: true
-- type: tag_list
-  name: tags
-  label: tags
 - type: file
   name: thumbnail
   label: thumbnail
@@ -46,5 +43,10 @@ fields:
   label: thumb-ext
   config:
     required: false
+- type: text
+  name: tags
+  label: tags
+  config:
+    required: true
 pages:
 - _posts/2018-09-22-Forestry-Test-Post.md
