@@ -3,7 +3,7 @@ layout: post
 author: Samson Zhang
 title: Responsive Hamburger Menu in Pure CSS (No JS)
 date: 2018-08-13 12:00:00 +0000
-tags: []
+tags: tutorial pure-css
 keyword: css-hamburger
 thumb-ext: mp4
 
