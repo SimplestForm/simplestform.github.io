@@ -1,7 +1,9 @@
-
+{% if include.hidehtml %}
+{% else %}
 {% highlight html %}
 {{ include.html }}
 {% endhighlight %}
+{% endif %}
 
 {% highlight css %}
 {{ include.style }}
@@ -15,14 +17,14 @@
 {% endif %}
 
 {% if include.resize %}
-.demo{
+.demo-resize{
   width: {{ include.resize }}%;
 }
 {% endif %}
 </style>
 
 <div class='demo-container'>
-  <iframe class='demo' srcdoc="<style>{{ include.style }}</style>{{ include.html }}"></iframe>
+  <iframe class='demo {% if include.resize %}demo-resize{% endif %}' srcdoc="<style>html,body{margin:0;height:100%;}{{ include.style }}</style>{{ include.html }}"></iframe>
   {% if include.resize %}
   <div class='demo-spacer'>
     <div class='demo-drag-prompt'><span>Drag to resize</span></div>
