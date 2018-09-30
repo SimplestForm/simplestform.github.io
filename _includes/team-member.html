@@ -1,0 +1,18 @@
+<div class='team-member'>
+  <img src='{{ include.data.img }}' class='team-picture'>
+  <div class='team-info'>
+    <div class='team-name'><span>{{ include.data.name }}</span></div>
+    <div class='team-title'><span>{{ include.data.title }}</span></div>
+  </div>
+  <div class='team-social'>
+    {% if include.data.website %}
+    <div class='team-social-item'><a href='{{ include.data.website }}'>Website</a></div>
+    {% endif %}
+    {% if include.data.twitter %}
+    <div class='team-social-item'><a href='https://twitter.com/{{ include.data.twitter }}'><i class="fab fa-twitter"></i></a></div>
+    {% endif %}
+    {% if include.data.youtube %}
+    <div class='team-social-item'><a href='{{ include.data.youtube }}'><i class="fab fa-youtube"></i></a></div>
+    {% endif %}
+  </div>
+</div>

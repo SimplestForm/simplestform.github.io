@@ -1,17 +1,104 @@
 .about-head{
-  color: #fff;
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  background-color: #193c66;
   padding: 64px 0;
-  margin-bottom: 64px;
 }
 
-.about-head img{
-  width: 300px;
+.about-container{
+  background-color: #193c66;
+  color: #fff;
+  padding: 64px 24px;
+}
+
+.about-container a{
+  color: #99ceff;
+}
+
+.about-container a:hover{
+  color: #fff;
+}
+
+.about-container p:first-of-type{
+  font-size: 36px;
+  margin: 0;
+  line-height: 1.3;
+}
+
+@media (max-width: 600px){
+  .about-container p:first-of-type{
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 700px){
+  .team-member{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+
+  .team-info{
+    margin-left: 32px;
+  }
+}
+
+.team-container{
+  font-family: 'Inconsolata';
+  line-height: 1.2;
+}
+
+.team-name{
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.team-title{
+  font-size: 18px;
+  margin-top: 4px;
+}
+
+.team-member{
+  margin: 32px 0;
+}
+
+.team-picture{
+  width: 100px;
+  border-radius: 50%;
+}
+
+.team-social{
+  display: inline-flex;
+  margin-left: auto;
+  margin-top: 4px;
+}
+
+.team-social-item{
+  margin: 0 10px;
+}
+
+@media (max-width: 700px){
+  .team-container{
+    text-align: center;
+  }
+
+  .team-picture{
+    width: 160px;
+    margin: 16px auto;
+  }
+}
+
+.about-container h1, .about-container h2{
+  font-family: 'Inconsolata';
+  font-size: 24px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin: 84px 0 32px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255,255,255);
+  opacity: 0.4;
 }
 
 .page h1{
@@ -21,8 +108,13 @@
 
 .about-logo{
   max-width: 300px;
+  margin: 0 auto;
 }
 
 .about-logo img{
-  border-radius: 50%;
+  width: 100%;
+}
+
+div.about-logo:first-of-type{
+  padding: 32px 0;
 }
