@@ -9,22 +9,8 @@
 {{ include.style }}
 {% endhighlight %}
 
-<style>
-{% if include.height %}
-.demo-container{
-  height: {{ include.height }}px;
-}
-{% endif %}
-
-{% if include.resize %}
-.demo-resize{
-  width: {{ include.resize }}%;
-}
-{% endif %}
-</style>
-
-<div class='demo-container'>
-  <iframe class='demo {% if include.resize %}demo-resize{% endif %}' srcdoc="<style>html,body{margin:0;height:100%;}{{ include.style }}</style>{{ include.html }}"></iframe>
+<div class='demo-container' style='{% if include.height %}height: {{ include.height }}px;{% endif %}'>
+  <iframe class='demo {% if include.resize %}demo-resize{% endif %}' style='{% if include.resize %}width: {{ include.resize }}%;{% endif %}' srcdoc="<style>html,body{margin:0;height:100%;}{{ include.style }}</style>{{ include.html }}"></iframe>
   {% if include.resize %}
   <div class='demo-spacer'>
     <div class='demo-drag-prompt'><span>Drag to resize</span></div>

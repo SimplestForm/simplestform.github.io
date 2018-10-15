@@ -151,3 +151,75 @@ In HTML, we can create a checkbox. In CSS, we can apply some code only when the 
 {% include demo-gen.html html=html-button-1 style=css-button-1 %}
 
 ## Putting it All Together
+
+{% capture html-final %}
+<input type='checkbox' id='hamburger'>
+<label class='menu-button' for='hamburger'>☰</label>
+<div class='menu'>
+  <div class='menu-item'><span>Home</span></div>
+  <div class='menu-item'><span>Blog</span></div>
+  <div class='menu-item'><span>About</span></div>
+  <div class='menu-item'><span>Contact</span></div>
+</div>
+{% endcapture %}
+
+{% capture css-final %}
+.menu-item{
+  padding: 16px;
+}
+
+.menu{
+  position: fixed;
+  top: 0;
+  display: flex;
+  transition: left 0.2s ease; /* make the menu animate as it moves back and forth \*/
+}
+
+.menu-item, .menu-button{
+  display: inline-block;
+  font-family: sans-serif;
+  padding: 16px;
+  cursor: pointer;
+}
+
+.menu-item:hover{
+  background-color: #eee;
+}
+
+#hamburger{
+  display: none;
+}
+
+@media (min-width: 400px){
+  .menu{
+    width: 100%;
+    border-bottom: 1px solid #000;
+  }
+
+  .menu-button{
+    display: none;
+  }
+}
+
+@media (max-width: 400px){
+  .menu{
+    padding-top: 49px;
+    left: -200px; /* hides the menu from view by default \*/
+    width: 200px;
+    height: 100%;
+    flex-flow: column nowrap;
+    border-right: 1px solid #000;
+  }
+
+  #hamburger:checked ~ .menu{
+    left: 0; /* when our checkbox #hamburger is checked, bring its sibling .menu back into view \*/
+  }
+
+  .menu-button{
+    position: relative;
+    z-index: 5; /* make the button sit on top of the menu so it remains clickable. See our article on z-index to learn more \*/
+  }
+}
+{% endcapture %}
+
+{% include demo-gen.html html=html-final style=css-final resize=60 height=300 %}
